@@ -58,12 +58,15 @@ def upload_file(service, path, file_name):
         'parents': [folder_id]
     }
 
-    media = MediaFileUpload(os.path.join(path, file_name), mimetype=mime_type)
+    file = os.path.join(path, file_name)
+    media = MediaFileUpload(file, mimetype=mime_type)
 
     results = service.files().create(
         body=file_metadata,
         media_body=media,
         fields='id'
     ).execute()
+
+    os.remove(file)
 
     return results
