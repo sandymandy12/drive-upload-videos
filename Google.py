@@ -67,6 +67,4 @@ def upload_file(service, path, file_name):
         fields='id'
     ).execute()
 
-    os.remove(file)
-
     return results

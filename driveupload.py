@@ -18,6 +18,10 @@ dir_list = os.listdir(path)
 
 results = [upload_file(service, path, x)
            for x in dir_list if x.endswith('.mp4')]
-# files = [upload_file(x) for x in dir_list if x.endswith('.txt')]
 
+print('\nRESULTS\n')
 print(results)
+
+print('deleting files..')
+
+[os.remove(os.path.join(path, x)) for x in dir_list if x.endswith('.mp4')]
