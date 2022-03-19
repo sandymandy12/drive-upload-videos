@@ -51,7 +51,7 @@ def convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0):
 
 def upload_file(service, path, file_name):
     folder_id = '1CIgD9Tl0TdWvZr-cKgOLDaFL8aCiZhoQ'
-    mime_type = 'text/plain'
+    mime_type = 'video/mp4'
 
     file_metadata = {
         'name': file_name,
