@@ -38,4 +38,4 @@ class Download():
 
 if __name__ == "__main__":
     dl = Download(sys.argv[1:])
-    dl.main()
+    dl.run()

@@ -12,9 +12,8 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-# home_dir = os.path.expanduser('~')
-# path = os.path.join(home_dir, 'Downloads')
-path = os.getcwd()
+home_dir = os.path.expanduser('~')
+path = os.path.join(home_dir, 'Downloads')
 dir_list = os.listdir(path)
 
 results = [upload_file(service, path, x)
