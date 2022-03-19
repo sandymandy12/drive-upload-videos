@@ -4,15 +4,15 @@ upload files to google drive from downloads
 
 ## requirements
 
-pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 ## create environment
 
-python3 -m venv myenv
+python -m venv myenv
 
 ### windows
 
-source myenv/Scripts/activate
+myenv/Scripts/activate.ps1
 
 ### linux/mac
 
